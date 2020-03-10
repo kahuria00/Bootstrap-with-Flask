@@ -15,7 +15,7 @@
 <div class="col-sm-6 mx-auto w-50 mt-5">	
 <div class="card" style="width:35rem;">
 
-		<form>
+		<form method='POST' action="http://localhost:5000/button">
 	<div class="col-md-5 mb-4">
 	  <div class="form-group" >
 	    <label for="startdate">Start Date</label>
@@ -26,8 +26,8 @@
 	    <label for="enddate">End Date</label>
 	    <input type="text" class="form-control" id="enddate" placeholder="Enter end date" name='enddate'>
 	  </div>
-
-	   <button type="submit" id='retrieve' class="btn btn-primary" >Submit</button>
+ 
+	   <input type="submit" id='submit' class="btn btn-primary" value='submit' >
      
 	
 	</div>

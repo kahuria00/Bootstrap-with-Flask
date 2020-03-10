@@ -5,9 +5,9 @@ from flask import Flask, jsonify, render_template, request,redirect
 
 app=Flask(__name__)
 
-# @app.route('/')
-# def index():
-#     return render_template('index.html')
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/button', methods=['POST','GET'])
 def button():
@@ -15,11 +15,10 @@ def button():
         startdate=request.form['startdate']
         enddate=request.form['enddate']
         return render_template('button.html',startdate=startdate,enddate=enddate)
-        print(startdate,enddate)
-
-    return render_template('index.html')
 
 
+    return render_template('index.html')  
+        
 
 if __name__ == '__main__':
    app.run(debug=True)
